@@ -44,6 +44,7 @@ Ensure you have Python installed along with the required libraries. You can inst
     <img src="https://github.com/Aalaa4444/Video-Subtitles-Detector/blob/main/output_examples/output5.png" width="400">
     <img src="https://github.com/Aalaa4444/Video-Subtitles-Detector/blob/main/output_examples/output6.png" width="400">
 </p>
+
 ## Advanced Features
 1. Advanced Text Detection
 Optical Character Recognition (OCR): Integrate OCR to extract the actual text from the segmented regions.
