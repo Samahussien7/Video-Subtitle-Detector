@@ -31,7 +31,101 @@ Ensure you have Python installed along with the required libraries. You can inst
 ```bash
     python video_processing.py
 ```
+## Advanced Features
+1. Advanced Text Detection
+Optical Character Recognition (OCR): Integrate OCR to extract the actual text from the segmented regions.
 
+```bash
+import pytesseract
+
+def extract_text_from_frame(frame):
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    text = pytesseract.image_to_string(gray)
+    return text
+Deep Learning Models: Use pre-trained deep learning models like EAST or CRNN for more accurate text detection.
+```
+2. Subtitles Extraction and Formatting
+Subtitle Files: Format extracted text into subtitle files (e.g., SRT format).
+
+```bash
+def save_subtitles_as_srt(subtitles, output_filename):
+    with open(output_filename, 'w') as f:
+        for i, (start_time, end_time, text) in enumerate(subtitles):
+            f.write(f"{i + 1}\n")
+            f.write(f"{start_time} --> {end_time}\n")
+            f.write(f"{text}\n\n")
+```
+3. Video Analytics
+Statistics and Analytics: Analyze video content for word counts, subtitle duration, and frequency.
+
+```bash
+def analyze_subtitles(subtitles):
+    word_counts = {}
+    for _, _, text in subtitles:
+        words = text.split()
+        for word in words:
+            word_counts[word] = word_counts.get(word, 0) + 1
+    return word_counts
+```
+4. User Interface
+GUI Application: Develop a GUI using Tkinter or PyQt.
+
+```bash
+from tkinter import Tk, Label, Button, filedialog
+
+def browse_file():
+    filename = filedialog.askopenfilename()
+    print(f"Selected file: {filename}")
+
+root = Tk()
+root.title("Video Subtitle Segmentation")
+
+Label(root, text="Select a video file").pack()
+Button(root, text="Browse", command=browse_file).pack()
+
+root.mainloop()
+```
+5. Batch Processing
+Multiple Videos: Process multiple videos in a batch.
+
+```bash
+def process_videos(video_files):
+    for video_file in video_files:
+        # Process each video file
+        pass
+```
+6. Integration with Other Tools
+Integration with Media Players: Create plugins for media players like VLC.
+
+API Integration: Build an API with Flask or FastAPI.
+
+```bash
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+@app.route('/segment', methods=['POST'])
+def segment_video():
+    video_file = request.files['video']
+    # Process the video and return results
+    return jsonify({'status': 'success'})
+
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+7. Performance Optimization
+Parallel Processing: Speed up frame processing with parallel processing.
+
+```bash
+from concurrent.futures import ThreadPoolExecutor
+
+def process_frame(frame):
+    # Processing logic here
+    pass
+
+with ThreadPoolExecutor() as executor:
+    results = list(executor.map(process_frame, frames))
+```
 
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request if you have improvements or bug fixes.
