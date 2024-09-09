@@ -20,11 +20,11 @@ Ensure you have Python installed along with the required libraries. You can inst
 
 3- Execute video_processing.py to process the video. It will:
 
-** Create directories for storing frames and processed data.
-** Extract frames from the video.
-** Perform preprocessing on each frame.
-** Apply text segmentation techniques.
-** Save segmented frames and compile them into a new video.
+* Create directories for storing frames and processed data.
+* Extract frames from the video.
+* Perform preprocessing on each frame.
+* Apply text segmentation techniques.
+* Save segmented frames and compile them into a new video.
     ```bash
     python video_processing.py
     ```
