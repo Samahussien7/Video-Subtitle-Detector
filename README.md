@@ -1,11 +1,14 @@
 # Video-Subtitles-Detector
 ## Overview
-This repository provides a set of tools for detecting and highlighting subtitles in video frames. The project leverages OpenCV for image processing to detect text areas in video frames and save the results. The code performs various preprocessing steps on each frame and segments subtitles using morphological operations.
+This repository provides a set of tools for detecting and highlighting subtitles in video frames. The project leverages OpenCV for image processing to detect text areas in video frames by drawing bounding boxes around them and save the results. The code performs various preprocessing steps on each frame and segments subtitles using morphological operations.
 
 ## Features
 * Frame Extraction: Extracts frames from a video file and saves them in different formats.
 * Preprocessing: Converts frames to grayscale, applies Gaussian blur, and thresholding.
 * Subtitle Segmentation: Detects and highlights subtitle areas using different morphological techniques.
+  ** Draw red bounding boxes around each line of subtitles.
+  ** Draw green bounding boxes around each word within the subtitles.
+  ** Process and apply bounding boxes to all subtitles in the video.
 * Video Reconstruction: Compiles segmented frames into a new video file.
 ## Installation
 Ensure you have Python installed along with the required libraries. You can install the necessary libraries using pip:
