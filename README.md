@@ -32,7 +32,7 @@ Ensure you have Python installed along with the required libraries. You can inst
     python video_processing.py
 ```
 ## Output Examples
-<p align="middle">     
+<p >     
     <img src="https://github.com/Aalaa4444/Video-Subtitles-Detector/blob/main/output_examples/output.png" width="200">     
     <img src="https://github.com/Aalaa4444/Video-Subtitles-Detector/blob/main/output_examples/output2.png" width="200">
     <img src="https://github.com/Aalaa4444/Video-Subtitles-Detector/blob/main/output_examples/output3.png" width="200">
