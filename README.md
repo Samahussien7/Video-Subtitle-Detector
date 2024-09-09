@@ -25,9 +25,9 @@ Ensure you have Python installed along with the required libraries. You can inst
 * Perform preprocessing on each frame.
 * Apply text segmentation techniques.
 * Save segmented frames and compile them into a new video.
-    ```bash
+```bash
     python video_processing.py
-    ```
+```
 
 
 ## Contributing
