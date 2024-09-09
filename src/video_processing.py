@@ -4,7 +4,7 @@ from preprocessing import create_directories, preprocess_frame
 from segmentation import segment_text1, segment_text2, segment_text3
 
 def main():
-    video_path = 'data/input_video.mp4'
+    video_path = 'input_video.mp4'
     base_directory = 'output'
     subfolders = ['frames', 'processing-frames', 'segmented-frames']
     
