@@ -37,12 +37,12 @@ Ensure you have Python installed along with the required libraries. You can inst
     <img src="https://github.com/Aalaa4444/Video-Subtitles-Detector/blob/main/output_examples/output2.png" width="500">
 </p>
 <p >     
-    <img src="https://github.com/Aalaa4444/Video-Subtitles-Detector/blob/main/output_examples/output3.png" width="200">
-    <img src="https://github.com/Aalaa4444/Video-Subtitles-Detector/blob/main/output_examples/output4.png" width="200">
+    <img src="https://github.com/Aalaa4444/Video-Subtitles-Detector/blob/main/output_examples/output3.png" width="600">
+    <img src="https://github.com/Aalaa4444/Video-Subtitles-Detector/blob/main/output_examples/output4.png" width="600">
 </p>
 <p > 
-    <img src="https://github.com/Aalaa4444/Video-Subtitles-Detector/blob/main/output_examples/output5.png" width="200">
-    <img src="https://github.com/Aalaa4444/Video-Subtitles-Detector/blob/main/output_examples/output6.png" width="200">
+    <img src="https://github.com/Aalaa4444/Video-Subtitles-Detector/blob/main/output_examples/output5.png" width="700">
+    <img src="https://github.com/Aalaa4444/Video-Subtitles-Detector/blob/main/output_examples/output6.png" width="700">
 </p>
 ## Advanced Features
 1. Advanced Text Detection
