@@ -31,6 +31,14 @@ Ensure you have Python installed along with the required libraries. You can inst
 ```bash
     python video_processing.py
 ```
+## Output Examples
+<p align="middle">     
+    <img src="https://github.com/Aalaa4444/Video-Subtitles-Detector/blob/main/output_examples/output.png" width="200">     
+    <img src="https://github.com/Aalaa4444/Video-Subtitles-Detector/blob/main/output_examples/output2.png" width="200">
+    <img src="https://github.com/Aalaa4444/Video-Subtitles-Detector/blob/main/output_examples/output3.png" width="200">
+    <img src="https://github.com/Aalaa4444/Video-Subtitles-Detector/blob/main/output_examples/output4.png" width="200">
+    <img src="https://github.com/Aalaa4444/Video-Subtitles-Detector/blob/main/output_examples/output5.png" width="200">
+</p>
 ## Advanced Features
 1. Advanced Text Detection
 Optical Character Recognition (OCR): Integrate OCR to extract the actual text from the segmented regions.
