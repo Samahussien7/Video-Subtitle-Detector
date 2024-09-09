@@ -3,16 +3,16 @@
 This repository provides a set of tools for detecting and highlighting subtitles in video frames. The project leverages OpenCV for image processing to detect text areas in video frames and save the results. The code performs various preprocessing steps on each frame and segments subtitles using morphological operations.
 
 ## Features
-Frame Extraction: Extracts frames from a video file and saves them in different formats.
-Preprocessing: Converts frames to grayscale, applies Gaussian blur, and thresholding.
-Subtitle Segmentation: Detects and highlights subtitle areas using different morphological techniques.
-Video Reconstruction: Compiles segmented frames into a new video file.
+* Frame Extraction: Extracts frames from a video file and saves them in different formats.
+* Preprocessing: Converts frames to grayscale, applies Gaussian blur, and thresholding.
+* Subtitle Segmentation: Detects and highlights subtitle areas using different morphological techniques.
+* Video Reconstruction: Compiles segmented frames into a new video file.
 ## Installation
 Ensure you have Python installed along with the required libraries. You can install the necessary libraries using pip:
 
-    ```bash
+```bash
     pip install numpy opencv-python matplotlib
-    ```
+```
 ## Usage
 1- Place your video file in the main directory if you will use jupyter or in src file if you will run python files .
 
