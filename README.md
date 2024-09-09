@@ -33,8 +33,8 @@ Ensure you have Python installed along with the required libraries. You can inst
 ```
 ## Output Examples
 <p >     
-    <img src="https://github.com/Aalaa4444/Video-Subtitles-Detector/blob/main/output_examples/output.png" width="500">     
-    <img src="https://github.com/Aalaa4444/Video-Subtitles-Detector/blob/main/output_examples/output2.png" width="500">
+    <img src="https://github.com/Aalaa4444/Video-Subtitles-Detector/blob/main/output_examples/output.png" width="400">     
+    <img src="https://github.com/Aalaa4444/Video-Subtitles-Detector/blob/main/output_examples/output2.png" width="400">
 </p>
 <p >     
     <img src="https://github.com/Aalaa4444/Video-Subtitles-Detector/blob/main/output_examples/output3.png" width="500">
