@@ -1,30 +1,41 @@
-#Detects and highlights text areas of each word.
 def segment_text1(frame, top_percentage=87, bottom_percentage=99):
-
+    """
+    Detects and highlights text areas of each word, using horizontal morphological closing.
+    """
     # Convert frame to grayscale
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    
     # Apply adaptive thresholding to highlight text areas
     mask = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 11, 2)
-    # Define a kernel for morphological operations
-    kernel = np.ones((6, 6), np.uint8)
-    # Apply morphological closing to clean up the mask
-    mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel)
+    
+    # Define a kernel for horizontal morphological closing
+    horizontal_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (15, 3))  # Horizontal kernel
+    
+    # Apply horizontal morphological closing to connect fragmented text parts
+    mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, horizontal_kernel)
+    
     # Get frame dimensions
     height = frame.shape[0]
+    
     # Define regions of interest for text detection
     top_region = int(top_percentage * height / 100)
     bottom_region = int(bottom_percentage * height / 100)
+    
     # Find contours in the specified region
     contours, _ = cv2.findContours(mask[top_region:bottom_region, :], cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    
     # Create bounding boxes for detected contours
     bounding_boxes = [(x, y + top_region, x + w, y + h + top_region) for cnt in contours for x, y, w, h in [cv2.boundingRect(cnt)] if w > 10 and h > 10]
+    
     # Sort bounding boxes based on their vertical position
     bounding_boxes.sort(key=lambda box: box[1])
+    
     # Draw bounding boxes on the frame
     for x1, y1, x2, y2 in bounding_boxes:
         cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+    
     return frame
-  #Detects and highlights red frame
+#Detects and highlights red frame
 def segment_text2(frame, top_ratio=0.93, bottom_ratio=0.99):
     
     # Convert frame to grayscale
@@ -62,7 +73,6 @@ def segment_text2(frame, top_ratio=0.93, bottom_ratio=0.99):
     for x1, y1, x2, y2 in merged_boxes:   # Draw bounding boxes on the frame
         cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 255), 2)
     return frame
-
 def segment_text3(frame, top_ratio=0.87, bottom_ratio=0.925):
     """Detects and highlights additional areas in the frame."""
     # Convert frame to grayscale
